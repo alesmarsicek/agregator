@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9669cda3-4e28-4617-b759-9f1efb104014</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Agregator</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\DBWorker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\UserSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IFilehelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\images\cloudy.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\images\lightbulb.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\images\network.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\images\stop.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\images\trafficlight.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\images\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\images\bg.jpg" />
+  </ItemGroup>
+</Project>
